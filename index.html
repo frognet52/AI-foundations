@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Sait.Edu AI Foundations Level 1 open badge for teaching assistants and support staff in Norfolk schools.">
+<meta property="og:title" content="AI Foundations Badge · Sait.Edu">
+<meta property="og:description" content="Demo open badge and Module 1 video for Norfolk schools' AI CPD.">
+<meta property="og:image" content="https://frognet52.github.io/AI-foundations/badge.png">
+<link rel="icon" href="badge.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>AI Foundations Badge · Sait.Edu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: credential certificate — badge + identity panel, then a single reading column of proof */
+:root{
+  --navy:#001020; --navy-2:#0A1628; --blue:#69B0FE; --blue-2:#4A90D9; --blue-3:#85B7EB;
+  --bg:#F3F6FA; --surface:#FFFFFF; --fg:#0A1628; --muted:#4B5B70; --line:#D9E2EE;
+  --accent:#1F6FCC; --chip-bg:#E3F0FF; --ok:#137A4B; --ok-bg:#E2F5EC; --code-bg:#0A1628; --code-fg:#CFE3FB;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:"Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#001020; --surface:#0A1628; --fg:#F2F6FB; --muted:#9FB3CB; --line:#1C3150;
+  --accent:#69B0FE; --chip-bg:#11284A; --ok:#5FD39C; --ok-bg:#0E2E22; --code-bg:#00070F; --code-fg:#CFE3FB; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#001020; --surface:#0A1628; --fg:#F2F6FB; --muted:#9FB3CB; --line:#1C3150;
+  --accent:#69B0FE; --chip-bg:#11284A; --ok:#5FD39C; --ok-bg:#0E2E22; --code-bg:#00070F; --code-fg:#CFE3FB; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{background:var(--navy);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.02em}
+.mark i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--blue);color:var(--navy);font-style:normal;font-weight:700;font-size:13px}
+.top small{color:var(--blue-3);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.demo{background:var(--chip-bg);border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.demo .wrap{padding-block:9px}
+.demo b{color:var(--fg);font-weight:600}
+.hero{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:40px;align-items:center;padding-block:40px 28px}
+.badge-svg{width:100%;height:auto;display:block;max-width:300px;filter:drop-shadow(0 18px 30px rgba(0,16,32,.28))}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 8px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,4.4vw,42px);line-height:1.12;margin:0 0 10px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 20px;max-width:56ch}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;margin:0 0 22px;padding:0}
+.facts div{min-width:0}
+.facts dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-weight:500}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--ok-bg);color:var(--ok);font-weight:600;font-size:13px;border-radius:999px;padding:4px 12px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--body);padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--blue-2);border-color:var(--blue-2);color:#fff}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+main section{border-top:1px solid var(--line);padding-block:28px}
+h2{font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 14px}
+.video{background:var(--navy);border-radius:12px;overflow:hidden;aspect-ratio:16/9;max-width:100%;display:grid;place-items:center;color:var(--blue-3);font-size:14px}
+.video video{width:100%;height:100%;display:block;background:var(--navy)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cols div{min-width:0}
+.cols h3{font-size:15px;font-weight:600;margin:0 0 4px}
+.cols p{margin:0;color:var(--muted);font-size:14px}
+ol.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px;max-width:68ch}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start}
+ol.steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font-weight:600;font-size:13px}
+.evidence{display:grid;gap:10px;max-width:68ch}
+.ev{display:flex;justify-content:space-between;gap:16px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:8px;flex-wrap:wrap}
+.ev span:first-child{font-weight:500;min-width:0}
+.ev span:last-child{color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.tags li{background:var(--chip-bg);color:var(--accent);font-size:13px;font-weight:500;padding:4px 12px;border-radius:999px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:8px}
+summary{cursor:pointer;padding:12px 14px;font-weight:500}
+.code-wrap{position:relative;border-top:1px solid var(--line)}
+pre{margin:0;background:var(--code-bg);color:var(--code-fg);font:12.5px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:16px;overflow-x:auto;border-radius:0 0 8px 8px}
+.copy{position:absolute;top:10px;right:10px}
+a{color:var(--accent)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (max-width:720px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:28px 20px}
+  .badge-svg{max-width:220px;margin:0 auto}
+  .cols{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){.badge-svg{animation:rise .7s ease-out both}@keyframes rise{from{transform:translateY(8px) scale(.98)}to{transform:none}}}
+</style>
+</head>
+<body>
+
+
+<header class="top"><div class="wrap">
+  <div class="mark"><i>KS</i>Sait.Edu</div>
+  <small>Credential check</small>
+</div></header>
+<div class="demo"><div class="wrap"><b>Demo credential.</b> Issued to a sample learner to show how the Norfolk schools AI CPD programme will award and verify badges.</div></div>
+
+<div class="wrap">
+  <div class="hero">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="AI Foundations Level 1 badge" class="badge-svg">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="38%" r="65%">
+      <stop offset="0" stop-color="#0E2440"/>
+      <stop offset="1" stop-color="#001020"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#85B7EB"/>
+      <stop offset="0.5" stop-color="#69B0FE"/>
+      <stop offset="1" stop-color="#4A90D9"/>
+    </linearGradient>
+    <path id="arcTop" d="M 42 300 A 258 258 0 0 1 558 300"/>
+    <path id="arcBot" d="M 28 300 A 272 272 0 0 0 572 300"/>
+  </defs>
+  <!-- outer disc -->
+  <circle cx="300" cy="300" r="290" fill="#001020"/>
+  <circle cx="300" cy="300" r="282" fill="none" stroke="url(#ring)" stroke-width="6"/>
+  <circle cx="300" cy="300" r="246" fill="none" stroke="#69B0FE" stroke-opacity=".35" stroke-width="1.5"/>
+  <!-- ring text -->
+  <text font-family="Poppins, sans-serif" font-weight="500" font-size="22" letter-spacing="7" fill="#85B7EB">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">SAIT.EDU · TRUSTED AI PROVIDER</textPath>
+  </text>
+  <text font-family="Poppins, sans-serif" font-weight="500" font-size="20" letter-spacing="6" fill="#85B7EB">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle">FOR NORFOLK SCHOOLS</textPath>
+  </text>
+  <circle cx="36" cy="300" r="5" fill="#69B0FE"/>
+  <circle cx="564" cy="300" r="5" fill="#69B0FE"/>
+  <!-- inner core -->
+  <circle cx="300" cy="300" r="232" fill="url(#core)"/>
+  <!-- spark / node mark -->
+  <g transform="translate(300 180)">
+    <circle r="44" fill="#69B0FE" fill-opacity=".12" stroke="#69B0FE" stroke-width="2"/>
+    <path d="M0 -26 C3 -9 9 -3 26 0 C9 3 3 9 0 26 C-3 9 -9 3 -26 0 C-9 -3 -3 -9 0 -26 Z" fill="#FFFFFF"/>
+    <circle cx="22" cy="-22" r="5" fill="#69B0FE"/>
+    <circle cx="-22" cy="22" r="3.5" fill="#85B7EB"/>
+  </g>
+  <text x="300" y="296" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="54" fill="#FFFFFF">AI Foundations</text>
+  <text x="300" y="338" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="500" font-size="19" letter-spacing="5" fill="#85B7EB">TEACHING ASSISTANTS</text>
+  <text x="300" y="364" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="500" font-size="19" letter-spacing="5" fill="#85B7EB">&amp; SUPPORT STAFF</text>
+  <!-- level ribbon -->
+  <g transform="translate(300 420)">
+    <rect x="-92" y="-24" width="184" height="48" rx="24" fill="#69B0FE"/>
+    <text y="9" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="22" letter-spacing="4" fill="#001020">LEVEL 1</text>
+  </g>
+  <text x="300" y="490" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="400" font-size="15" letter-spacing="3" fill="#FFFFFF" fill-opacity=".6">SAFE · PRACTICAL · CONFIDENT</text>
+</svg>
+
+    <div>
+      <p class="eyebrow">Open Badge · Level 1</p>
+      <h1>AI Foundations for Teaching Assistants &amp; Support Staff</h1>
+      <p class="sub">The holder can use their school's approved AI assistant safely for everyday tasks, keeps pupil data out of AI tools, and checks AI output before it reaches a child or parent.</p>
+      <dl class="facts">
+        <div><dt>Awarded to</dt><dd>Demo Learner</dd></div>
+        <div><dt>Status</dt><dd><span class="status">Valid (demo)</span></dd></div>
+        <div><dt>Issued by</dt><dd>Sait.Edu Limited</dd></div>
+        <div><dt>Issued on</dt><dd>28 October 2026</dd></div>
+        <div><dt>Credential ID</dt><dd style="font-size:13px;word-break:break-all">SE-AIF-TA1-0001</dd></div>
+        <div><dt>Format</dt><dd>Open Badges 3.0</dd></div>
+      </dl>
+      <div class="actions">
+        <a class="btn primary" id="li" href="https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&amp;name=AI%20Foundations%3A%20Teaching%20Assistants%20%26%20Support%20Staff%20(Level%201)&amp;organizationName=Sait.Edu&amp;issueYear=2026&amp;issueMonth=10&amp;certId=SE-AIF-TA1-0001" target="_blank" rel="noopener">Add to LinkedIn</a>
+        <a class="btn" href="#module">Watch the module</a>
+        <a class="btn" href="badge.json">Badge data (JSON)</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="module">
+    <h2>Module 1: Your AI assistant, used safely</h2>
+    <div class="video" id="video"><video controls playsinline preload="metadata" poster="poster.jpg" src="ai-foundations-module1.mp4"></video></div>
+  </section>
+
+  <section>
+    <h2>What the holder can do</h2>
+    <div class="cols">
+      <div><h3>Use the right tool</h3><p>Works in the school's approved AI assistant, signed in with a school account, rather than a personal app.</p></div>
+      <div><h3>Protect pupils</h3><p>Never puts names, SEN details or safeguarding information into AI. Uses "Pupil A" and general descriptions instead.</p></div>
+      <div><h3>Stay the professional</h3><p>Reads, checks and edits every AI draft for accuracy, tone and suitability before it is used.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it is earned</h2>
+    <ol class="steps">
+      <li><div><strong>Watch Module 1.</strong> A three-minute video covering the three safe-use rules and three everyday tasks.</div></li>
+      <li><div><strong>Pass the knowledge check.</strong> Three scenario questions, all answered correctly.</div></li>
+      <li><div><strong>Submit one real resource.</strong> Something adapted with the school's approved AI tool, with no pupil data, plus a one-line note on what was checked or changed.</div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Evidence on file</h2>
+    <div class="evidence">
+      <div class="ev"><span>Module 1 video completed</span><span>21 Oct 2026</span></div>
+      <div class="ev"><span>Knowledge check: 3 of 3</span><span>21 Oct 2026</span></div>
+      <div class="ev"><span>Year 4 reading text adapted to three reading levels</span><span>Reviewed by Sait.Edu</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills and alignment</h2>
+    <ul class="tags"><li>AI literacy</li><li>Data protection</li><li>Resource adaptation</li><li>Professional judgement</li><li>CPD</li></ul>
+    <p style="margin:0 0 18px;max-width:68ch;color:var(--muted)">Aligned to the Department for Education's guidance, <a href="https://www.gov.uk/government/publications/generative-artificial-intelligence-in-education" target="_blank" rel="noopener">Generative AI in education</a>.</p>
+    <details>
+      <summary>View credential data (Open Badges 3.0)</summary>
+      <div class="code-wrap">
+        <button class="btn copy" id="copyBtn" type="button">Copy</button>
+        <pre id="json">{
+  &quot;@context&quot;: [
+    &quot;https://www.w3.org/ns/credentials/v2&quot;,
+    &quot;https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json&quot;
+  ],
+  &quot;id&quot;: &quot;https://frognet52.github.io/AI-foundations/badge.json&quot;,
+  &quot;type&quot;: [
+    &quot;VerifiableCredential&quot;,
+    &quot;OpenBadgeCredential&quot;
+  ],
+  &quot;name&quot;: &quot;AI Foundations: Teaching Assistants &amp; Support Staff (Level 1)&quot;,
+  &quot;issuer&quot;: {
+    &quot;id&quot;: &quot;https://saitedu.net&quot;,
+    &quot;type&quot;: [
+      &quot;Profile&quot;
+    ],
+    &quot;name&quot;: &quot;Sait.Edu Limited&quot;,
+    &quot;url&quot;: &quot;https://saitedu.net&quot;,
+    &quot;description&quot;: &quot;Trusted AI Provider for UK schools and businesses. Company no. 10546381.&quot;
+  },
+  &quot;validFrom&quot;: &quot;2026-10-28T00:00:00Z&quot;,
+  &quot;credentialSubject&quot;: {
+    &quot;type&quot;: [
+      &quot;AchievementSubject&quot;
+    ],
+    &quot;name&quot;: &quot;Demo Learner&quot;,
+    &quot;achievement&quot;: {
+      &quot;id&quot;: &quot;https://frognet52.github.io/AI-foundations/badge.json#achievement&quot;,
+      &quot;type&quot;: [
+        &quot;Achievement&quot;
+      ],
+      &quot;achievementType&quot;: &quot;Badge&quot;,
+      &quot;name&quot;: &quot;AI Foundations: Teaching Assistants &amp; Support Staff (Level 1)&quot;,
+      &quot;description&quot;: &quot;Awarded to school support staff who can use their school&#x27;s approved AI assistant safely and effectively for everyday tasks, keep pupil data out of AI tools, and check AI output before it reaches a child or parent.&quot;,
+      &quot;criteria&quot;: {
+        &quot;narrative&quot;: &quot;1. Complete the Module 1 video (approx. 3 minutes).\n2. Score 3/3 on the safe-use knowledge check.\n3. Submit one adapted resource made with the school&#x27;s approved AI tool, with no pupil personal data, plus a one-line note on what you checked or changed.&quot;
+      },
+      &quot;image&quot;: {
+        &quot;id&quot;: &quot;https://frognet52.github.io/AI-foundations/badge.png&quot;,
+        &quot;type&quot;: &quot;Image&quot;
+      },
+      &quot;tag&quot;: [
+        &quot;AI literacy&quot;,
+        &quot;Data protection&quot;,
+        &quot;Teaching assistants&quot;,
+        &quot;CPD&quot;,
+        &quot;Norfolk&quot;
+      ],
+      &quot;alignment&quot;: [
+        {
+          &quot;type&quot;: [
+            &quot;Alignment&quot;
+          ],
+          &quot;targetName&quot;: &quot;DfE: Generative AI in education&quot;,
+          &quot;targetUrl&quot;: &quot;https://www.gov.uk/government/publications/generative-artificial-intelligence-in-education&quot;
+        }
+      ]
+    }
+  }
+}</pre>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <span>Sait.Edu Limited · Company no. 10546381 · Trusted AI Provider</span>
+  <a href="https://saitedu.net" target="_blank" rel="noopener">saitedu.net</a>
+</div></footer>
+
+<script>
+document.getElementById('copyBtn').addEventListener('click', function(){
+  var b=this, t=document.getElementById('json').textContent;
+  var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+  try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('json'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Press Ctrl+C'}
+});
+</script>
+
+</body>
+</html>

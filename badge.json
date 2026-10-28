@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://frognet52.github.io/AI-foundations/badge.json",
+  "type": [
+    "VerifiableCredential",
+    "OpenBadgeCredential"
+  ],
+  "name": "AI Foundations: Teaching Assistants & Support Staff (Level 1)",
+  "issuer": {
+    "id": "https://saitedu.net",
+    "type": [
+      "Profile"
+    ],
+    "name": "Sait.Edu Limited",
+    "url": "https://saitedu.net",
+    "description": "Trusted AI Provider for UK schools and businesses. Company no. 10546381."
+  },
+  "validFrom": "2026-10-28T00:00:00Z",
+  "credentialSubject": {
+    "type": [
+      "AchievementSubject"
+    ],
+    "name": "Demo Learner",
+    "achievement": {
+      "id": "https://frognet52.github.io/AI-foundations/badge.json#achievement",
+      "type": [
+        "Achievement"
+      ],
+      "achievementType": "Badge",
+      "name": "AI Foundations: Teaching Assistants & Support Staff (Level 1)",
+      "description": "Awarded to school support staff who can use their school's approved AI assistant safely and effectively for everyday tasks, keep pupil data out of AI tools, and check AI output before it reaches a child or parent.",
+      "criteria": {
+        "narrative": "1. Complete the Module 1 video (approx. 3 minutes).\n2. Score 3/3 on the safe-use knowledge check.\n3. Submit one adapted resource made with the school's approved AI tool, with no pupil personal data, plus a one-line note on what you checked or changed."
+      },
+      "image": {
+        "id": "https://frognet52.github.io/AI-foundations/badge.png",
+        "type": "Image"
+      },
+      "tag": [
+        "AI literacy",
+        "Data protection",
+        "Teaching assistants",
+        "CPD",
+        "Norfolk"
+      ],
+      "alignment": [
+        {
+          "type": [
+            "Alignment"
+          ],
+          "targetName": "DfE: Generative AI in education",
+          "targetUrl": "https://www.gov.uk/government/publications/generative-artificial-intelligence-in-education"
+        }
+      ]
+    }
+  }
+}
